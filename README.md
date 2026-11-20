@@ -9,7 +9,7 @@ broker.
 
 **[Download](https://reamerlabs.com/download)** ·
 **[Docs](https://reamerlabs.com/docs)** ·
-**[Examples](https://github.com/j0osman/reamer-research-examples)** ·
+**[Examples](https://github.com/reamerlabs/reamer-research-examples)** ·
 **[MCP server](https://github.com/reamerlabs/reamer-research-mcp)** ·
 **[Pricing](https://reamerlabs.com/pricing)**
 
@@ -109,7 +109,7 @@ of a 20-bar breakout took 3.38 s from Python and 0.36 s from C++. On the
 same strategy and data, Backtrader took 15.04 s, QuantConnect LEAN
 22.10 s and NautilusTrader 76.85 s as installed. Every runner and the raw
 results are in the
-[benchmark repository](https://github.com/j0osman/research-engine-benchmark).
+[benchmark repository](https://github.com/reamerlabs/research-engine-benchmark).
 
 ## Evaluation Mode and pricing
 
