@@ -137,4 +137,10 @@ Download it only from the links above or
 [reamerlabs.com/download](https://reamerlabs.com/download). Terms:
 [reamerlabs.com/terms](https://reamerlabs.com/terms).
 
-Questions and support: support@reamerlabs.com.
+## Support
+
+Bug reports, questions and feature requests: open an
+[issue](https://github.com/reamerlabs/reamer-research/issues). Licence keys,
+billing and anything private: support@reamerlabs.com, answered on a
+best-effort basis. All Reamer Labs repositories:
+[github.com/reamerlabs](https://github.com/reamerlabs).
