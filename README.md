@@ -7,6 +7,7 @@ tick-level fills on a seeded path inside each bar, check every trade in
 visual trade diagnostics, then send the same orders live through your own
 broker.
 
+**[PyPI](https://pypi.org/project/reamer-research/)** ·
 **[Download](https://reamerlabs.com/download)** ·
 **[Docs](https://reamerlabs.com/docs)** ·
 **[Examples](https://github.com/reamerlabs/reamer-research-examples)** ·
@@ -15,9 +16,33 @@ broker.
 
 Linux x86-64 · macOS on Apple silicon · Windows through WSL2 · Python 3.9+ · C++20
 
-## Download
+## Install
 
-The links below always serve the latest release, straight from Reamer Labs.
+```bash
+pip install reamer-research
+```
+
+The Python package is on [PyPI](https://pypi.org/project/reamer-research/),
+with the compiled engine and the visual trade diagnostics tool inside it.
+No key and no sign-up: without a licence it runs in Evaluation Mode.
+
+## First run
+
+```bash
+pip install reamer-research
+git clone https://github.com/reamerlabs/reamer-research-examples
+cd reamer-research-examples/python
+python3 examples/quickstart.py
+```
+
+To backtest from Claude Code, Claude Desktop or Cursor, the
+[MCP server](https://github.com/reamerlabs/reamer-research-mcp) installs the
+engine with itself: `claude mcp add reamer-research -- uvx reamer-research-mcp`.
+
+## The full kit
+
+For C++, and to activate a licence with `reamer-license`. The links below
+always serve the latest release, straight from Reamer Labs.
 No key and no sign-up.
 
 | Platform | Kit |
@@ -27,21 +52,18 @@ No key and no sign-up.
 
 Every file, with its SHA-256 checksum and signature, is listed at
 [licenses.reamerlabs.com/evaluation/research](https://licenses.reamerlabs.com/evaluation/research).
-Each kit holds the Python wheel, the C++ header and library, the visual
-trade diagnostics tool, example strategies, sample data and the
-documentation.
-
-## First run
-
-```bash
-tar xzf research-kit-*.tar.gz
-pip install research-kit-*/python/reamer_research-*.whl
-python3 research-kit-*/python/examples/quickstart.py
-```
+Each kit holds the C++ header and library, the `reamer-license` tool, the
+same Python wheel as PyPI, the visual trade diagnostics tool, example
+strategies, sample data and the documentation.
 
 ## A strategy
 
-ATR band reversion with a take profit and a stop loss on every entry:
+ATR band reversion with a take profit and a stop loss on every entry, on
+the sample bars from the examples repository:
+
+```bash
+curl -LO https://raw.githubusercontent.com/reamerlabs/reamer-research-examples/main/python/sample_data/AAPL.csv
+```
 
 ```python
 import numpy as np
@@ -94,7 +116,7 @@ CMake `find_package(ReamerResearch)` and pkg-config `reamer-research` also work.
 
 | Area | Feature |
 |---|---|
-| Languages | A pip-installable Python wheel; one C++20 header; a stable C ABI for Rust, Go, Julia, C# or any language that calls C. |
+| Languages | A Python package on PyPI (`pip install reamer-research`); one C++20 header; a stable C ABI for Rust, Go, Julia, C# or any language that calls C. |
 | Strategies | A function, a class or an object with `on_bar`. |
 | Data | CSV, pandas DataFrames, NumPy arrays and memory-mapped `.bin` files. Bars of any type: time, tick, volume, dollar or your own rule. Multi-ticker on one clock. Alpaca and Databento fetchers. |
 | Execution | Each bar replayed as a seeded tick path with bid, ask, spread and slippage. Market, limit and stop orders, brackets, time in force. Spread, slippage, commission, swap and margin per ticker, under a [public execution spec](https://reamerlabs.com/docs/execution-spec). |
@@ -132,9 +154,9 @@ unchanged.
 
 This repository holds documentation only. The engine is commercial software
 under the Reamer Labs Software License Agreement, `LICENSE.txt` in each
-kit, whose Section 2B grants Evaluation Mode without payment or a key.
-Download it only from the links above or
-[reamerlabs.com/download](https://reamerlabs.com/download). Terms:
+kit and in the wheel, whose Section 2B grants Evaluation Mode without payment or a key.
+Install it only from [PyPI](https://pypi.org/project/reamer-research/), the
+links above or [reamerlabs.com/download](https://reamerlabs.com/download). Terms:
 [reamerlabs.com/terms](https://reamerlabs.com/terms).
 
 ## Support
